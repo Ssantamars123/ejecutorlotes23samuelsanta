@@ -1,0 +1,4 @@
+# Forzar finales de linea LF: el proyecto corre en Linux/WSL.
+# Sin esto, Windows pondria CRLF y romperia el shebang de los .sh.
+*.sh   text eol=lf
+*.py   text eol=lf
