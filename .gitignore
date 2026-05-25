@@ -9,3 +9,6 @@ aralmac/
 # Python
 __pycache__/
 *.pyc
+
+# Enunciado de la practica (no se versiona)
+*.pdf
