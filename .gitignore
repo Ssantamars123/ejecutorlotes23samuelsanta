@@ -1,0 +1,11 @@
+# Almacenamiento generado en tiempo de ejecucion (no se versiona)
+aralmac/
+
+# Tuberias y temporales
+*.pet
+*.resp
+*.err
+
+# Python
+__pycache__/
+*.pyc
