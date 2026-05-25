@@ -145,10 +145,11 @@ class Ejecutor:
         if op == "Parar":
             return self.parar()
 
-        if self.estado == "Suspendido":
-            return proto.error("servicio suspendido")
-
+        # Solo se bloquean NUEVAS ejecuciones cuando el servicio esta suspendido;
+        # Estado y Matar siguen disponibles (PDF 3.11.1).
         if op == "Ejecutar":
+            if self.estado == "Suspendido":
+                return proto.error("servicio suspendido")
             return self.ejecutar(pet)
         if op == "Estado":
             return self.estado_op(pet)
